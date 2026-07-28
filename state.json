@@ -1,6 +1,12 @@
 {
+  "reminderText": "⚠️ <b>WARNING</b>\n\nOur admins will never ask for money in private messages.\n\n✅ If you make a deal anywhere other than this official Deal Box, you are at high risk of being scammed.\n\n━━━━━━━━━━━━━━━━━━\n\n⚠️ <b>সতর্কতা</b>\n\nআমাদের কোনো এডমিন কখনো ব্যক্তিগত ইনবক্সে টাকা চাইবে না।\n\n✅ আমাদের এই অফিসিয়াল ডিল বক্স ব্যতীত অন্য কোথাও ডিল করলে প্রতারণার শিকার হওয়ার ঝুঁকি রয়েছে।",
+  "intervalMinutes": 1,
+  "activeOnly": true,
+  "autoDelete": true,
+  "autoPin": false,
+  "enabled": true,
   "lastReminderId": null,
+  "lastReminderAt": 0,
   "lastActivityAt": 0,
-  "lastCheckedActivityAt": 0,
-  "lastReminderAt": 0
+  "lastCheckedActivityAt": 0
 }

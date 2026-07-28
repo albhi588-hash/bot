@@ -1,7 +1,7 @@
 {
-  "name": "telegram-premium-active-reminder",
-  "version": "2.0.0",
-  "description": "Telegram active reminder bot with start, status and test commands.",
+  "name": "infinity-premium-reminder-bot",
+  "version": "3.0.0",
+  "description": "Telegram reminder bot controllable directly from group commands.",
   "main": "server.js",
   "scripts": {
     "start": "node server.js"
