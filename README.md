@@ -1,40 +1,16 @@
-# Infinity Premium Reminder Bot v3
+# Infinity Premium Reminder Bot — Polling Mode v4
 
-Telegram গ্রুপ থেকেই সব নিয়ন্ত্রণ করা যাবে।
-
-## Commands
-
-- `/start`
-- `/help`
-- `/status`
-- `/test`
-- `/setmessage`
-- `/interval 1`
-- `/active on`
-- `/active off`
-- `/autodelete on`
-- `/autodelete off`
-- `/autopin on`
-- `/autopin off`
-- `/reminder on`
-- `/reminder off`
-- `/showmessage`
-- `/resetmessage`
+Webhook লাগবে না।
 
 ## Environment Variables
 
 - `TELEGRAM_BOT_TOKEN`
 - `TELEGRAM_CHAT_ID`
-- `RENDER_EXTERNAL_URL`
-- `ADMIN_IDS` — ঐচ্ছিক; একাধিক Telegram numeric user ID কমা দিয়ে লিখুন
+- `ADMIN_IDS` — ঐচ্ছিক, কিন্তু নিরাপত্তার জন্য নিজের Telegram numeric ID দিন
 
-উদাহরণ:
+`RENDER_EXTERNAL_URL` এই ভার্সনে দরকার নেই।
 
-`123456789,987654321`
-
-ADMIN_IDS ফাঁকা রাখলে গ্রুপের সবাই কমান্ড ব্যবহার করতে পারবে। নিরাপত্তার জন্য অবশ্যই নিজের Telegram numeric ID দিন।
-
-## Render
+## Render Commands
 
 Build Command:
 
@@ -44,12 +20,33 @@ Start Command:
 
 `npm start`
 
-Deploy হওয়ার পর খুলুন:
+## Commands
 
-`https://আপনার-সার্ভিস.onrender.com/set-webhook`
+- `/start`
+- `/status`
+- `/test`
+- `/interval 1`
+- `/active on`
+- `/autodelete on`
+- `/autopin on`
+- `/reminder on`
+- `/showmessage`
+- `/resetmessage`
 
-## Telegram Bot Permissions
+নতুন লেখা:
 
-- Delete Messages
-- Pin Messages
-- BotFather → `/setprivacy` → Disable
+`/setmessage`
+এর পরের লাইনে সম্পূর্ণ লেখা দিন।
+
+## গুরুত্বপূর্ণ
+
+1. BotFather → `/setprivacy` → Disable
+2. বটকে গ্রুপে Admin করুন
+3. Delete Messages অনুমতি দিন
+4. Pin ব্যবহার করলে Pin Messages অনুমতি দিন
+5. গ্রুপে Rose Bot থাকলে নিজের বটের username সহ কমান্ড দিন:
+   `/status@YourBotUsername`
+
+## Render Free
+
+Render Free service inactivity-তে sleep করতে পারে। তখন polling বন্ধ থাকবে যতক্ষণ সার্ভিস আবার জাগে।

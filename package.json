@@ -1,7 +1,7 @@
 {
-  "name": "infinity-premium-reminder-bot",
-  "version": "3.0.0",
-  "description": "Telegram reminder bot controllable directly from group commands.",
+  "name": "infinity-premium-reminder-polling",
+  "version": "4.0.0",
+  "description": "Premium Telegram reminder bot using long polling instead of webhook.",
   "main": "server.js",
   "scripts": {
     "start": "node server.js"

@@ -8,5 +8,6 @@
   "lastReminderId": null,
   "lastReminderAt": 0,
   "lastActivityAt": 0,
-  "lastCheckedActivityAt": 0
+  "lastCheckedActivityAt": 0,
+  "updateOffset": 0
 }
