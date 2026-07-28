@@ -1,7 +1,7 @@
 {
-  "name": "telegram-active-reminder-1min",
-  "version": "1.0.0",
-  "description": "Sends a reminder every minute only when the Telegram group is active, deleting the previous reminder first.",
+  "name": "telegram-premium-active-reminder",
+  "version": "2.0.0",
+  "description": "Telegram active reminder bot with start, status and test commands.",
   "main": "server.js",
   "scripts": {
     "start": "node server.js"

@@ -1,12 +1,15 @@
-# Telegram Active Reminder — ১ মিনিট
+# Telegram Premium Active Reminder Bot
 
-এই বট প্রতি ১ মিনিটে চেক করবে।
+## ফিচার
 
-- গত ১ মিনিটে সদস্যদের নতুন মেসেজ থাকলে আগের রিমাইন্ডার ডিলিট করবে।
-- তারপর নতুন রিমাইন্ডার পাঠাবে।
-- কোনো নতুন মেসেজ না থাকলে কিছুই পাঠাবে না।
+- চ্যাট সক্রিয় থাকলে প্রতি ১ মিনিটে রিমাইন্ডার পাঠাবে
+- আগের রিমাইন্ডার ডিলিট করবে
+- চ্যাট নিষ্ক্রিয় থাকলে নতুন রিমাইন্ডার পাঠাবে না
+- `/start` — বট অনলাইন কিনা দেখাবে
+- `/status` — বর্তমান স্ট্যাটাস দেখাবে
+- `/test` — সঙ্গে সঙ্গে টেস্ট রিমাইন্ডার পাঠাবে
 
-## Render Environment Variables
+## Environment Variables
 
 - `TELEGRAM_BOT_TOKEN`
 - `TELEGRAM_CHAT_ID`
@@ -22,16 +25,14 @@ Start Command:
 
 `npm start`
 
-## চালু করার পর
+## Deploy হওয়ার পর
 
-Render URL-এর শেষে একবার `/set-webhook` খুলুন।
+ব্রাউজারে খুলুন:
 
-উদাহরণ:
-
-`https://your-service.onrender.com/set-webhook`
+`https://আপনার-সার্ভিস.onrender.com/set-webhook`
 
 ## Telegram সেটিংস
 
-- বটকে গ্রুপে Admin করুন।
-- Delete Messages অনুমতি দিন।
-- BotFather → `/setprivacy` → আপনার বট → Disable করুন।
+1. বটকে গ্রুপে Admin করুন
+2. Delete Messages অনুমতি দিন
+3. BotFather → `/setprivacy` → আপনার বট → Disable
