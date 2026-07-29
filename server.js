@@ -116,9 +116,13 @@ async function sendText(chatId, text, replyToMessageId = null, useHtml = true) {
   if (useHtml) payload.parse_mode = "HTML";
   if (replyToMessageId) payload.reply_parameters = { message_id: replyToMessageId };
 
-  try {
+    try {
     return await telegram("sendMessage", payload);
   } catch (error) {
+    if (/message to be replied not found/i.test(error.message)) {
+      delete payload.reply_parameters;
+      return telegram("sendMessage", payload);
+    }
     // ব্যবহারকারীর custom text-এ অসম্পূর্ণ HTML থাকলেও response বন্ধ হবে না।
     if (useHtml && /parse entities|can't parse/i.test(error.message)) {
       delete payload.parse_mode;
