@@ -227,9 +227,9 @@ function helpText() {
 }
 
 const KNOWN_COMMANDS = new Set([
-  "/start", "/help", "/ping", "/chatid", "/status", "/test", "/setmessage",
+  "/start", "/help", "/ping", "/chatid", "/status", "/test", "/setmessage","/settext",
   "/interval", "/active", "/autodelete", "/autopin", "/reminder",
-  "/showmessage", "/resetmessage"
+  "/showmessage","/showtext", "/resetmessage"
 ]);
 
 async function handleCommand(message) {
@@ -293,7 +293,7 @@ async function handleCommand(message) {
     return true;
   }
 
-  if (command === "/setmessage") {
+  if (command === "/setmessage" || command === "/settext") {
     const newText = text.includes("\n") ? text.substring(text.indexOf("\n") + 1).trim() : "";
     if (!newText) {
       await sendText(chatId, `❌ এভাবে পাঠান:\n\n<code>/setmessage\nআপনার সম্পূর্ণ নতুন লেখা</code>`, message.message_id);
@@ -338,7 +338,7 @@ async function handleCommand(message) {
     return true;
   }
 
-  if (command === "/showmessage") {
+  if (command === "/showmessage" || command === "/showtext") {
     await sendText(chatId, `📢 <b>বর্তমান রিমাইন্ডার</b>\n\n${state.reminderText}`, message.message_id);
     return true;
   }
